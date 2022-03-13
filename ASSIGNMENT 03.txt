@@ -1,0 +1,771 @@
+ASSIGNMENT 03
+
+1.
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
+class Pattern1{
+	public static void main(String[] args){
+		for(int i=1;i<=5;i++){
+			for(int j=1;j<=i;j++){
+				System.out.print(j+" ");
+			}
+		System.out.println();	
+		}
+	}	
+}
+
+2.
+
+A
+A B
+A B C
+A B C D
+A B C D E
+
+class Pattern2{
+    public static void main(String[] args){
+	    
+	     for(int i=65;i<70;i++){
+		     for(char j=65;j<=i;j++){
+				 System.out.print(j+" ");
+			 }
+			 System.out.println();
+		 }
+	}
+}
+
+3.
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+class Pattern3{
+     public static void main(String[] args){
+		 for(int i=1;i<=5;i++){
+			 for(int j=1;j<=i;j++){
+				 System.out.print("*"+" ");
+			 }
+			System.out.println(); 
+		 }
+	 }
+}
+
+4.
+
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+
+class Pattern4{
+     public static void main(String[] args){
+	     int k=1;
+	     for(int i=1;i<=5;i++){
+		     for(int j=1;j<=k;j++){
+			     System.out.print(k+" ");
+				 
+			 }
+			 k++;
+			 System.out.println();
+		 }
+	 }
+}
+
+5.
+
+A
+B B
+C C C
+D D D D
+E E E E E
+
+class Pattern5{
+     public static void main(String[] args){
+	     char k=65;
+	     for(int i=1;i<=5;i++){
+		     for(char j=65;j<=k;j++){
+			      System.out.print(k+" ");
+			 }
+			 k++;
+			System.out.println(); 
+		 }
+	 }
+}
+
+6.
+
+           *
+         * *
+       * * *
+     * * * *
+   * * * * *
+   
+class Pattern6{
+    public static void main(String[] args){ 
+	    for(int i=1;i<=5;i++){
+			
+			for(int k=5;k>=i;k--){
+			   System.out.print("  ");
+			}
+		    for(int j=1;j<=i;j++){
+			   System.out.print("*"+" ");
+			}
+		System.out.println();	
+		}
+	}
+}
+
+7.
+
+     1
+    1 2
+   1 2 3
+  1 2 3 4
+ 1 2 3 4 5
+
+class Pattern7{
+     public static void main(String[] args){
+	      for(int i=1;i<=5;i++){
+			  for(int k=5;k>=i;k--){
+		        System.out.print(" ");
+		      }
+		      for(int j=1;j<=i;j++){
+		        System.out.print(j+" ");
+		      }
+			  System.out.println();
+		  }
+	 }
+}
+
+8.
+
+     5
+    4 5
+   3 4 5
+  2 3 4 5
+ 1 2 3 4 5
+
+class Pattern8{
+     public static void main(String[] args){
+		 int m=5;
+	      for(int i=5;i>=1;i--){
+			  
+			  for(int k=i;k>=1;k--){
+		        System.out.print(" ");
+		      }
+		      for(int j=i;j<=5;j++){
+				  
+		        System.out.print(j+" ");
+				 
+		      }
+			
+			  System.out.println();
+		  }
+	 }
+}
+
+9.
+
+     A
+    A B
+   A B C
+  A B C D
+ A B C D E
+
+class Pattern9{
+     public static void main(String[] args){
+		
+	      for(int i=65;i<=69;i++){
+			  for(int k=69;k>=i;k--){
+			      System.out.print(" ");
+			  }
+		      for(char j=65;j<=i;j++){
+			      System.out.print(j+" ");
+			  }		 
+			  System.out.println();
+		  }
+	 }
+}	 
+
+10.
+
+     E
+    D E
+   C D E
+  B C D E
+ A B C D E
+
+class Pattern10{
+     public static void main(String[] args){
+	      for(int i=69;i>=65;i--){
+			  
+			  for(int k=i;k>=65;k--){
+				  System.out.print(" ");
+			  }
+		       for(int j=i;j<=69;j++){
+			       System.out.print((char)j+" ");
+			   }
+			  System.out.println(); 
+		  }
+	 }
+}
+
+11.
+
+    *
+   ***
+  *****
+ *******
+*********
+
+class Pattern11{
+    public static void main(String[] args){
+		
+		
+	    for(int i=1;i<=9;i++){
+			
+			for(int k=9;k>=i;k--){
+				if(k%2==0){
+				System.out.print(" ");}
+			}
+			for(int j=1;j<=i;j++){
+			    if(i%2!=0){
+					System.out.print("*");
+				}   	
+			}
+			if(i%2==0){System.out.println();}
+			
+	    }
+	}   
+}		
+
+12.
+
+     1
+    2 2
+   3 3 3
+  4 4 4 4
+ 5 5 5 5 5
+
+class Pattern12{
+    public static void main(String[] args){
+	    int k=1;
+	    for(int i=1;i<=5;i++){
+			
+			for(int w=5;w>=i;w--){
+				System.out.print(" ");
+			}	
+		    for(int j=1;j<=i;j++){
+			    System.out.print(k+" ");
+			}
+			k++;
+			System.out.println();
+		}
+	}
+}
+
+13.
+
+     A
+    B B
+   C C C
+  D D D D
+ E E E E E
+
+class Pattern13{
+    public static void main(String[] args){
+	    int k=65;
+	    for(int i=1;i<=5;i++){
+			
+			for(int w=5;w>=i;w--){
+				System.out.print(" ");
+			}	
+		    for(int j=1;j<=i;j++){
+			    System.out.print((char)k+" ");
+			}
+			k++;
+			System.out.println();
+		}
+	}
+}
+
+14.
+
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+
+class Pattern14{
+    public static void main(String[] args){
+	    for(int i=5;i>=1;i--){
+		    for(int j=1;j<=i;j++){
+			   System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	} 
+}
+
+1.Star pattern
+
+*
+**
+***
+****
+*****
+
+class Spattern1{
+    public static void main(String[] args){
+	   for(int i=1;i<=5;i++){
+	       for(int j=1;j<=i;j++){
+		       System.out.print("*");
+		   }
+		   System.out.println();
+	   }
+	}	
+} 
+
+2.Star pattern
+
+     *
+    **
+   ***
+  ****
+ *****
+ 
+ class Spattern2{
+    public static void main(String[] args){
+	    for(int i=1;i<=5;i++){
+		
+			for(int k=5;k>=i;k--){
+			    System.out.print(" ");
+			}
+		    for (int j=1;j<=i;j++){
+			    System.out.print("*");
+			}	
+            System.out.println();			
+		}
+	}
+}
+
+
+3.Star pattern
+
+*****
+****
+***
+**
+*
+
+class Spattern3{
+    public static void main(String[] args){
+	    for(int i=5;i>=1;i--){
+		
+			
+		    for (int j=1;j<=i;j++){
+			    System.out.print("*");
+			}	
+            System.out.println();			
+		}
+	}
+}
+
+
+4.Star pattern
+
+*****
+ ****
+  ***
+   **
+    *
+
+class Spattern4{
+    public static void main(String[] args){
+	    for(int i=5;i>=1;i--){
+		
+			for (int s=4;s>=i;s--){
+			    System.out.print(" ");
+			}
+		    for (int j=1;j<=i;j++){
+			    System.out.print("*");
+			}	
+            System.out.println();			
+		}
+	}
+}
+
+
+5.Star pattern
+
+    *
+   ***
+  *****
+ *******
+*********
+
+class Spattern5{
+    public static void main(String[] args){
+	    for(int i=1;i<=9;i++){
+		
+			for(int w=9;w>=i;w--){
+				if(w%2==0){
+			    System.out.print(" ");}
+			}
+			
+				
+		    for (int j=1;j<=i;j++){
+				if(i%2!=0){
+			    System.out.print("*");}
+			}
+			if(i%2==0){	
+            System.out.println();}		
+		}
+	}
+}
+
+6.Star pattern
+
+*********
+ *******
+  *****
+   ***
+    *
+	
+class Spattern6{
+    public static void main(String[] args){
+	    for(int i=9;i>=1;i--){
+		
+			for(int w=i;w<=9;w++){
+				if(w%2==0){
+			    System.out.print(" ");}
+			}		
+		    for (int j=1;j<=i;j++){
+				if(i%2!=0){
+			    System.out.print("*");}
+			}
+			if(i%2==0){	
+            System.out.println();}		
+		}
+	}
+}	
+
+7.Star pattern
+
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+	
+class Spattern7{
+    public static void main(String[] args){
+	    for(int i=1;i<=9;i++){
+			for(int k=9;k>=i;k--){
+				if(k%2==0){
+					System.out.print(" ");
+				}
+			}
+		   for(int j=1;j<=i;j++){
+		       if(i%2!=0){
+		       System.out.print("*");}
+		   }
+		 if(i%2==0){  
+		System.out.println(); }  
+		}
+		
+		 
+		for(int i=8;i>=1;i--){
+			for(int k=i;k<=8;k++){
+				if(k%2==0){
+					System.out.print(" ");
+				}
+			}
+		   for(int j=1;j<=i;j++){
+		       if(i%2!=0){
+		       System.out.print("*");}
+		   }
+		 if(i%2==0){  
+		System.out.println(); }  
+		}
+	} 
+}	
+
+
+8.Star pattern
+
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+
+class Spattern8{
+    public static void main(String[] args){
+	    for(int i=1;i<=5;i++){
+		    for(int j=1;j<=i;j++){
+			     System.out.print("*");
+			}
+		System.out.println();	
+		}
+		
+		for(int i=4;i>=1;i--){
+		    for(int j=1;j<=i;j++){
+			     System.out.print("*");
+			}
+		System.out.println();	
+		}
+	}
+}
+
+9.Star pattern
+
+     *
+    **
+   ***
+  ****
+ *****
+  ****
+   ***
+    **
+     *
+	 
+class Spattern9{
+    public static void main(String[] args){
+	    for(int i=1;i<=5;i++){
+		
+		    for(int k=5;k>=i;k--){
+			     System.out.print(" ");
+			} 
+		    for(int j=1;j<=i;j++){
+			     System.out.print("*");
+			}
+		System.out.println();	
+		}
+		
+		for(int i=4;i>=1;i--){
+			
+			for(int w=5;w>=i;w--){
+			System.out.print(" ");}
+		    for(int j=1;j<=i;j++){
+			     System.out.print("*");
+			}
+		System.out.println();	
+		}
+	}
+}	 
+
+10.Star pattern
+
+     *****
+    *****
+   *****
+  *****
+ *****
+
+class Spattern10{
+    public static void main(String[] args){
+	    for(int i=1;i<=5;i++){
+			
+			for(int s=5;s>=i;s--){
+		       System.out.print(" ");
+		   }
+		   for(int j=1;j<=5;j++){
+		       System.out.print("*");
+		   }
+		System.out.println();   
+		}
+	}
+}
+
+11.Star pattern
+
+ *****
+  *****
+   *****
+    *****
+     *****
+
+class Spattern11{
+    public static void main(String[] args){
+	    for(int i=1;i<=5;i++){
+			
+			for(int s=1;s<=i;s++){
+		       System.out.print(" ");
+		   }
+		   for(int j=1;j<=5;j++){
+		       System.out.print("*");
+		   }
+		System.out.println();   
+		}
+	}
+}	 
+
+12.Star pattern
+
+*****
+****
+***
+**
+*
+**
+***
+****
+*****
+
+class Spattern12{
+    public static void main(String[] args){
+	    for(int i=1;i<=4;i++){
+		    for(int j=i; j<=5;j++){
+			    System.out.print("*");
+			}
+		System.out.println();	
+		}
+		
+		for(int i=1;i<=5;i++){
+		    for(int j=1; j<=i;j++){
+			    System.out.print("*");
+			}
+		System.out.println();	
+		}
+	}
+}
+
+13.Star pattern
+
+ *****
+  ****
+   ***
+    **
+     *
+    **
+   ***
+  ****
+ *****
+
+class Spattern13{
+    public static void main(String[] args){
+	    for(int i=1;i<=4;i++){
+		
+		for(int s=1; s<=i;s++){
+			    System.out.print(" ");
+			}
+		    for(int j=i; j<=5;j++){
+			    System.out.print("*");
+			}
+		System.out.println();	
+		}
+		
+		for(int i=1;i<=5;i++){
+			
+			for(int s=5; s>=i;s--){
+			    System.out.print(" ");
+			}
+		    for(int j=1; j<=i;j++){
+			    System.out.print("*");
+			}
+		System.out.println();	
+		}
+	}
+}
+
+14.Star pattern
+
+ * * * * *
+  * * * *
+   * * *
+    * *
+     *
+    * *
+   * * *
+  * * * *
+ * * * * *
+ 
+class Spattern14{
+    public static void main(String[] args){
+	    for(int i=5;i>=2;i--){
+			
+			for(int j=5;j>=i;j--){
+			    System.out.print(" ");
+			}
+		    for(int j=i;j>=1;j--){
+			    System.out.print("*"+" ");
+			}
+		System.out.println();	
+		}
+		
+		for(int i=1;i<=5;i++){
+			
+			for(int j=5;j>=i;j--){
+			    System.out.print(" ");
+			}
+		    for(int j=i;j>=1;j--){
+			    System.out.print("*"+" ");
+			}
+		System.out.println();	
+		}
+	}
+}
+
+15.Star pattern
+
+*
+**
+* *
+*  *
+*****
+
+16.Star pattern
+
+     *
+    **
+   * *
+  *  *
+ *****
+ 
+ class Spattern16{
+    public static void main(String[] args){
+		
+	    for(int i=1;i<=5;i++){
+		
+		for (int w=5;w>=i;w--){
+		    System.out.print(" ");
+		}
+		    for(int j=i;j>=1;j--){
+				
+				if(i<5){
+				if(j==i || j==1){
+					System.out.print("*");
+				}else System.out.print(" ");	
+				}else System.out.print("*");
+				
+			}
+		System.out.println();	
+		}
+	}
+}	
+ 
+
+1.Pyramid Pattern1
+
+
+
+

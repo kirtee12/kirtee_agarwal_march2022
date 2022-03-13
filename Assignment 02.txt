@@ -1,0 +1,213 @@
+Assignment 02: 25 questions
+
+1. Write a Java program to print 'Hello' on screen and then print your name on a separate line. 
+
+class Name{
+     static public void main(String[] args){
+	     System.out.print("Hello\nLokesh Patil");
+	 }
+}
+
+2. Write a Java program to print the sum of two numbers. 
+
+class Addition{
+    public static void main(String[] args){
+	    int num1=74, num2=36;
+		int add=num1+num2;
+		
+		System.out.println(add);		
+	}
+}
+
+3. Write a Java program to divide two numbers and print on the screen. 
+
+class Divide{
+    public static void main(String[] args){
+	    int n1=50, n2=3;
+		int divide=n1/n2;
+		System.out.println(divide);
+	}
+}
+
+4. Write a Java program to print the result of the following operations. 
+
+class Result{
+    public static void main(String[] args){
+	    int n1,n2,n3,n4;
+		
+		System.out.println(n1=(-5+8*6));
+		System.out.println(n2=((55+9)%9));
+		System.out.println(n3=(20+-3*5/8));
+		System.out.println(n4=(5+15/3*2-8%3));
+	}
+}
+
+5. Write a Java program that takes two numbers as input and display the product of 
+two numbers. 
+
+class Product{
+    public static void main(String[] args){
+	   int num1=25, num2=5;
+	   int mul=num1*num2;
+	   System.out.println("25x5="+mul);
+	}
+}
+
+6. Write a Java program to print the sum (addition), multiply, subtract, divide and 
+remainder of two numbers. 
+
+class Operations{
+    public static void main(String[] args){
+	    int n1=125, n2=24;
+		int add,min,mul;
+		add=n1+n2;
+		min=n1-n2;
+		mul=n1*n2;
+		System.out.println("125+24="+add);
+		System.out.println("125-24="+min);
+		System.out.println("125x24="+mul);
+		
+	}
+}
+
+7. Write a Java program that takes a number as input and prints its multiplication 
+table upto 10. 
+
+import java.util.Scanner;
+class Table{
+    public static void main(String[] args){
+	    Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number ");
+		int table= sc.nextInt();
+		
+		for(int i=1; i<=10;i++){
+			int n=table*i;
+			System.out.println(table+"x"+i+"="+n);
+		}	
+	}
+}
+
+8. Write a Java program to display the following pattern. 
+
+class Jpattern{
+    public static void main(String[] args){
+	    System.out.println("   j     a   v     v   a");
+		System.out.println("   j    a a   v   v   a a");
+		System.out.println("j  j   aaaaa   v v   aaaaa");
+		System.out.println(" jj   a     a   v   a     a");
+	}
+}
+
+9. Write a Java program to compute the specified expressions and print the output.
+
+class Assignment9{
+    public static void main(String[] args){
+	    double d;
+		d=((25.5*3.5-3.5*3.5)/(40.5-4.5));
+		System.out.print(d);
+	}
+}
+
+10. Write a Java program to compute a specified formula. 
+
+class Assignment10{
+    public static void main(String[] args){
+	    double d;
+		d=4.0*(1-(1.0/3)+(1.0/5)-(1.0/7)+(1.0/9)-(1.0/11));
+		System.out.print(d);
+	}
+}
+
+11. Write a Java program to print the area and perimeter of a circle. 
+
+class Assignment11{
+    public static void main(String[] args){
+	    double rad=7.5, pie=3.14159, peri,area;
+		peri=2*pie*rad;
+		area=pie*rad*rad;
+		System.out.println("Perimeter is="+peri);
+		System.out.println("Area is="+area);	
+	}
+}	
+
+12. Write a Java program that takes three numbers as input to calculate and print the 
+average of the numbers. 
+
+import java.util.Scanner;
+class Assignment12{
+    public static void main(String[] args){
+	    Scanner sc=new Scanner(System.in);
+		System.out.println("Enter three numbers");
+		int n1=sc.nextInt();
+		int n2=sc.nextInt();
+		int n3=sc.nextInt();
+		
+		double avg =(n1+n2+n3)/3;
+		System.out.print(avg);		
+	}
+}
+
+13. Write a Java program to print the area and perimeter of a rectangle.
+
+class Assignment13{
+    public static void main(String[] args){
+	    double width=5.6, height=8.5, area,peri;
+		area=width*height;
+		peri=2*(width+height);
+		System.out.println("Area is="+area);
+		System.out.print("Perimeter is="+peri);	
+	}
+}
+
+14. Write a Java program to print an American flag on the screen. 
+
+class Assignment14{
+    public static void main(String[] args){
+	    System.out.println("* * * * * * * * *=====================================");
+		System.out.println(" * * * * * * * * =====================================");
+		System.out.println("* * * * * * * * *=====================================");
+		System.out.println(" * * * * * * * * =====================================");
+		System.out.println("* * * * * * * * *=====================================");
+		System.out.println(" * * * * * * * * =====================================");
+		System.out.println("* * * * * * * * *=====================================");
+		System.out.println(" * * * * * * * * =====================================");
+		System.out.println("======================================================");
+		System.out.println("======================================================");
+		System.out.println("======================================================");
+		System.out.println("======================================================");
+		System.out.println("======================================================");
+		System.out.println("======================================================");
+		System.out.println("======================================================");
+		System.out.println("======================================================");
+	}
+}
+
+15. Write a Java program to swap two variables. 
+
+class Assignment16{
+    public static void main(String[] args){
+		int a=10;
+		int b=20;
+		System.out.println("Before swap a="+a);
+		System.out.println("Before swap b="+b);
+		int c=b;
+		 a=b;
+		 b=c;
+		 System.out.println("After swap a="+a);
+		 System.out.println("After swap b="+b);		
+	}
+}	
+
+16. Write a Java program to print a face.
+
+class Assignment16{
+    public static void main(String[] args){
+	    System.out.println("  "+"+\"\"\"\"\"+"+"");
+		System.out.println(" [| o o |]");
+		System.out.println("  |  ^  |");
+		System.out.println("  | '-' |");
+		System.out.println("  +-----+");
+	}
+}	
+
+17. Write a Java program to add two binary numbers. 
