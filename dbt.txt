@@ -1,0 +1,121 @@
+create database DBT_EXAM;
+use DBT_EXAM;
+/************************************ SECTION 2 ********************************************************/
+create table DEPT (DEPTNO int , DNAME varchar(15), LOC varchar(10));
+insert into DEPT (DEPTNO,DNAME,LOC) values
+('10', 'ACCOUNTING', 'NEW YORK'),
+('20', 'RESEARCH', 'DALLAS'),
+('30', 'SALES', 'CHICAGO'),
+('40', 'OPERATIONS', 'BOSTON');
+
+create table EMP (EMP_NO int, ENAME varchar(10),JOB varchar(9), HIRE_DATE date ,SAL float ,COMM float, DEPT_NO	int);
+insert into EMP(EMP_NO,ENAME,JOB,HIRE_DATE,SAL,COMM,DEPT_NO) value
+(7839, 'KING','MANAGER', '1991-11-17', 5000, NULL,10),
+(7698, 'BLAKE','CLERK', '1981-05-01', 2850, NULL, 30),
+(7782, 'CLARK','MANAGER', '1981-06-09', 2450 ,NULL, 10),
+(7566, 'JONES','CLERK', '1981-04-02', 2975, NULL, 20),
+(7654, 'MARTIN','SALESMAN', '1981-09-28', 1250, 1400, 30),
+(7499, 'ALLEN','SALESMAN', '1981-02-20', 1600, 300 ,30);
+
+select * from EMP;
+select * from DEPT;
+
+/*1. Find the names of all employees hired in the month of February (of
+any year).*/
+(1)-->select * from emp where month(HIRE_DATE)=02;
+
+/* 2Find the names of all employees whose name ends with the letter‘M’.*/
+(2)-->select ENAME from emp where ename like '%M';
+
+
+/* 3 Display the ENAME and JOB for all employees who belong to the
+same DEPTNO as employee ‘KING’. */
+
+(3)-->select ENAME , job from emp
+where dept_no=(select dept_no from emp where ename ='KING');
+
+/* 4 Display the HRA for each employee given that HRA is 20% of
+SAL.*/
+ALTER TABLE EMP ADD COLUMN (HRA FLOAT);
+(4)-->select * from EMP;
+update emp set HRA =0.2*sal;
+select * from EMP;
+SELECT (SAL*0.2) AS HRA FROM EMP;
+
+/*5 Display the JOB column with duplicate values suppressed.*/
+(5)-->select distinct job from emp;
+
+
+/*6. Display the Enames and the corresponding Dname*/
+(6)-->select emp.ename,dept.dname from emp,dept
+where emp.dept_no = DEPT.DEPTNO;
+
+
+
+/*7. Display the employees in descending order of DEPTNO.*/
+(7)--> select * from emp  order by dept_no desc;
+ 
+ /*8. Find the names of all employees who do not receive anycommission*/
+ (8)-->select ename from emp where  comm is null;
+ 
+ /*9. Display the employee name and employee number of theemployees with the headings as NUMBER and NAME*/
+ (9)--> select ename as NAME, emp_no as NUMBER  from emp;
+  
+  /*10.Find the name of the employee who is receiving the maximumsalary.*/
+ (10)-->select ename  from Emp where sal =(select MAX(sal) from emp);
+  
+  /*11.Display the sum of SAL for all the employees belonging toDEPTNO 10*/
+ (11)-->select sum(sal) from emp where  dept_no=10;
+  
+  /*12.Display the rows where JOB column ends with the letter ‘T’*/
+ (12)--> select * from emp where job like '%T';
+
+
+ /******************************** SECTION 3 *************************************************/ 
+/*1.Write a stored procedure to convert a temperature in Fahrenheit (F) to its
+equivalent in Celsius (C). The required formula is:- C= (F-32)*5/9 Insert the
+temperature in Centigrade into TEMPP table. Calling program for the stored
+procedure need not be written.*/
+****************************************************************************************************
+create table temp (centigrade float);
+
+DELIMITER //
+CREATE  PROCEDURE FAR_TO_CEL(FAR FLOAT) 
+BEGIN 
+DECLARE CELSIUS FLOAT  DEFAULT 0;
+SET CELSIUS =(FAR-32)*5/9;
+INSERT INTO TEMP VALUES(CELSIUS);
+END; //
+DELIMITER ;
+
+CALL FAR_TO_CEL(25);
+SELECT * FROM TEMP;
+
+*******************************************************************************************************
+/*2. Write a stored function by the name of Num_cube. The stored function
+should return the cube of a number ‘N’. The number ‘N’should be passed to the
+stored function as a parameter. Calling program for the stored function need not
+be written*/
+
+CREATE TABLE TEMP1(RESULT INT);
+
+DELIMITER //
+CREATE  FUNCTION NUM_CUBE( N INT)
+RETURNS int DETERMINISTIC 
+BEGIN 
+			RETURN N*N*N;
+END; //
+DELIMITER ;
+
+DELIMITER //
+CREATE  PROCEDURE CUB( ) 
+BEGIN   
+      DECLARE RES INT;
+      SET RES =NUM_CUBE(5);
+      INSERT INTO TEMP1 VALUES (RES);
+END; //
+DELIMITER ;
+  CALL CUB();
+  SELECT * FROM TEMP1;
+ **************************************************************************************************************** 
+  
